@@ -49,6 +49,9 @@ export default {
       }, {
         name: '热榜',
         path: LIST_TYPE.TOP
+      }, {
+        name: '关于我',
+        path: '/about'
       }]
     }
   }

@@ -5,10 +5,12 @@ import store from './store'
 import router from './router.js'
 
 import { init as themeInit } from './config/theme'
+import { init as permissionInit } from './config/permission'
 
 Vue.directive('intersect', intersect)
 
 themeInit()
+permissionInit()
 
 const app = new Vue({
   store,
