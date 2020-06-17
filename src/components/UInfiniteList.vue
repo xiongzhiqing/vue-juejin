@@ -45,7 +45,6 @@ export default {
     },
     // 填充滚动条
     padding () {
-      console.log(this.items.length)
       return `${this.over * this.itemHeight}px 0px ${Math.max((this.items.length - this.down) * this.itemHeight, 0)}px 0px`
     }
   },
