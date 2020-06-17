@@ -5,7 +5,9 @@
       <router-link :style="{background: $route.name == nav.path ? theme.highlight : ''}" class="m-link" :to="nav.path" v-for="nav in navs" :key="nav.path">{{nav.name}}</router-link>
     </div>
     <div class="m-content">
-      <router-view></router-view>
+      <u-keep-alive>
+        <router-view></router-view>
+      </u-keep-alive>
       <!-- <u-topic type="hot"></u-topic> -->
     </div>
 
@@ -21,9 +23,11 @@
 import UTopic from "./module/topic/views/UTopic.vue";
 import { LIST_TYPE } from './module/topic/store'
 import config from './config/config'
+import UKeepAlive from './components/UKeepAlive.vue'
 export default {
   components: {
-    UTopic
+    UTopic,
+    UKeepAlive
   },
   data () {
     return {

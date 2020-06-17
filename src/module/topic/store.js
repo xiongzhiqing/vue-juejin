@@ -37,7 +37,7 @@ export const store = {
     FETCH_LIST_DATA: ({ commit, state }, { type }) => {
       commit('SET_ACTIVE_TYPE', { type })
 
-      const after = state[type].pageInfo.endCursor || 2.26185707631780009
+      const after = state[type].pageInfo.endCursor || ''
 
       return fetchItems({
         type,
